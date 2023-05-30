@@ -1,0 +1,47 @@
+﻿<Window x:Class="Текстовый_редактор.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Текстовый_редактор"
+        mc:Ignorable="d"
+        Title="Текстовый редактор" Height="450" Width="800">
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Top">
+            <Menu Height="25" VerticalAlignment="Top">
+                <MenuItem Header="Файл">
+                    <MenuItem Header="Создать" Click="Новый"></MenuItem>
+                    <MenuItem Header="Открыть" Click="Открыть"></MenuItem>
+                    <MenuItem Header="Сохранить" Click="Сохранить"></MenuItem>
+                    <MenuItem Header="Удалить"></MenuItem>
+                </MenuItem>
+                <MenuItem Header="О программе"></MenuItem>
+                <Button x:Name="Закрыть" Width="55" Height="25" Content="Закрыть" 
+                Click="Закрыть_Click">
+                </Button>
+            </Menu>
+            <WrapPanel MinHeight="15">
+                <Button x:Name="Курсив" Width="20" Height="20"
+                Click="Курсив_Click">
+                    <Image Source="/Icons/italic_em_emphasis_format_editor_tool_icon_145968.png" />
+                </Button>
+
+                <Button x:Name="Полужирный" Width="20" Height="20"
+                Click="Полужирный_Click">
+                    <Image Source="/Icons/bold_format_editor_tool_icon_146015.png" />
+                </Button>
+
+                <Button x:Name="Подчеркнутый" Width="20" Height="20"
+                Click="Подчеркнутый_Click">
+                    <Image Source="/Icons/underline_format_editor_tool_icon_145920.png" />
+                </Button>
+            </WrapPanel>
+        </StackPanel>
+        <StatusBar DockPanel.Dock="Bottom" MinHeight="20">
+        </StatusBar>
+        <ListBox DockPanel.Dock="Left" MinWidth="200"></ListBox>
+        <TextBox Name="TextBox" MaxLength="250" TextWrapping="Wrap" AcceptsReturn="True" AcceptsTab="True"
+        SpellCheck.IsEnabled="True" Language="ru-ru">
+        </TextBox>
+    </DockPanel>
+</Window>
