@@ -21,7 +21,7 @@ namespace pz_21_2
 
         public Subject(string title, string control)
         {
-            this.title =title;
+            this.title =title; // изменение
             this.control = "Зачет";
         }
 
